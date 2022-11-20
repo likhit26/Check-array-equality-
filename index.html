@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&family=Mouse+Memoirs&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array equality checker</title>
+    <link rel="stylesheet" href="style.css">  
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon">                                
+</head>
+
+
+<body>
+
+     
+
+    <div class="a"><h1>Check if two arrays are equal or not </h1></div>
+
+
+
+        <!-- drop down menu start-->
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#para1">How to use</a>
+            <a href="#para2">What is array?</a>
+            <a href="#para3">Array Equality</a>
+            <a href="#foot">contact</a>
+          </div>
+          
+          <button class="openbtn" onclick="openNav()">☰ </button>  
+    
+          <!-- drop down menu end-->
+
+
+
+
+    <div class="center">
+        <input  class="button input1" id="array1" placeholder="Enter first array" >
+        <br>
+        <input  class="button input2" id="array2" placeholder="Enter second array" >
+        <br>
+        <button class="button button1 " onclick="setTimeout(fun1, 4000);visibleback()" id = "btn1" >Check array equality</button>
+    </div>
+        <!-- <div class="loading"></div> -->
+
+        <!-- setTimeout(fun1, 3000); -->
+
+    <div id=out class= "output">
+        <h1></h1>
+    </div>
+
+    
+   
+
+
+
+
+                                                                                                    <!--   loading animation -->
+    <div id=loader class="loading"  >
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      </body>
+
+
+
+
+        <button class="button button3 " onclick="myFunction()">Dark</button>                 
+                                                                                                        <!-- //DARK MODE BUTTON -->
+
+
+
+
+                                                                                                    <!-- how to use website part -->
+
+        <div id=para1  class="paragraph1">
+
+            <h1>How to use</h1>
+           <h3>1. Input the values seperated by commas</h3> 
+           <h3>2. Insert values in both input  area</h3>
+           <h3>3. click on "check array equality" to excute </h3>
+
+
+        </div>
+
+        
+                                                                                                    <!-- what is an array part -->
+
+        <div id=para2 class="paragraph2">
+            <h1>what is an Array ?</h1>
+            <h3>
+                An array is a collection of items of same data type stored at contiguous memory locations. 
+
+                This makes it easier to calculate the position of each element by simply adding an offset to 
+                a base value, i.e., the memory location of the first element of the array (generally denoted by 
+                the name of the array). The base value is index 0 and the difference between the two indexes is the 
+                offset.
+            </h3>
+        </div>
+
+
+        <div id=para3 class="paragraph3">
+            <h1>Array equality using javascript</h1><br>
+
+            <h2>Introduction to equality in javascript</h2><br>
+            <h3>
+                Equality is a tricky subject when it comes to javascript. There are technically 4 ways
+                 to compare if two values are equal in javascript. Of these, the two most common methods
+                  are the == operator, known as abstract equality and the === operator, known as strict
+                   equality. Before diving into checking for array equality, let us understand how these 
+                   equality operators work in javascript.
+
+                 <br><br><br>
+
+                 <h2>Strict Equality With ===</h2><br>
+                 <h3>  Given 2 values x and y, the strict equality checks for equality in the following way:
+                    
+                    x === y
+                    
+                    Check the types of x and y. If they are of different types, return false.
+                    If x and y are numbers, it checks if either of x or y is NaN, and returns false if one is NaN. If both x and y are either +0 or -0, return true. Otherwise, it also checks to see if they are the same number.
+                    If x and y are both null or both undefined, it returns true.
+                    If x and y are both booleans,  strings, or symbols, then it compares them by value.
+                    If x and y are both objects, it returns true if and only if they reference the same object.</h3><br><br>
+
+               <h2>Abstract Equality With ==</h2><br>
+
+               <h3>Here is a brief overview of how the == operator compares if x and y are equal.
+
+                If x and y are of the same type, check if x === y
+               If x and y are both either null or undefined, return true.
+               If x is a number and y is a string, convert y to a number and then compare using ===. Similarly, if x is a boolean or string, and y is a number, convert x to a number.
+               If x or y is a boolean, convert the other value of a number and compare them.
+               If x is an object and y is a symbol, string, or number, try to convert x to a primitive using valueof() and then compare using ===.</h3>
+                
+
+
+            </h3>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                    <!-- social media links start -->
+       
+
+        <div id=foot class="footer">
+            <a class="footer-linkA" href="https://www.linkedin.com/in/likhit-varma-m-74746320a/"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a class="footer-linkB" href="https://github.com/likhit26"><i class="fa fa-github fa-lg"></i></a>
+            <a class="footer-linkC" href="https://www.instagram.com/likhitvarma__/"><i class="fa fa-instagram fa-lg"></i>  </a>
+            <a class="footer-linkd" href="https://twitter.com/likhitvarma26"><i class="fa fa-twitter fa-lg"></i>  </a>
+            <br><br><br>
+            <p class="copyright"> © 2022 LIKHIT VARMA M.</p>
+        </div>  
+
+                                                                                                        <!-- social media links end-->
+
+            
+
+
+        
+    <script src="index.js" charset="utf-8"></script>
+
+</body>
+
+
+</html>
